@@ -16,9 +16,9 @@ object BotResponse {
                 when (random){
                     0 -> "안녕"
                     1 -> "반가워"
-                    3 -> "하이"
-                    else -> "error"
+                    else -> "나도"
                 }
+                
             }
             //오늘 어때?
             message.contains("오늘 어때?") -> {
@@ -26,7 +26,7 @@ object BotResponse {
                     0 -> "기분 좋아! 너도 기분 좋은 하루지? "
                     1 -> "너무 힘들어 하지만 너가 기분을 물어봐줘서 기분이 좋아질거 같아"
                     3 -> "괜찮아! 너는 어때?"
-                    else -> "error"
+                    else -> "피곤해"
 
                 }
             }
@@ -38,8 +38,8 @@ object BotResponse {
                 "동전 뒤집기 결과는 $result"
             }
             //solve
-            message.contains("풀다") ->{
-                val equation: String? = message.substringAfter("풀다")
+            message.contains("풀어줘") ->{
+                val equation: String? = message.substringAfter("풀어줘")
 
                 return try{
                     val answer = SolveMate.solveMath(equation ?: "0")
