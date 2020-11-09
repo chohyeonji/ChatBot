@@ -53,14 +53,7 @@ object BotResponse {
                 Time.timeStamp()
             }
 
-            //open internet
-            message.contains("열어줘") && message.contains("인터넷") ->{
-                OPEN_GOOGLE
-            }
-            //open Search
-            message.contains("찾아줘") ->{
-                OPEN_SEARCH
-            }
+            
             else ->{
                 when (random){
                     0 -> "다른 질문 해줘"
