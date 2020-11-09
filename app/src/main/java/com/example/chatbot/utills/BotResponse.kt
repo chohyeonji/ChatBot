@@ -53,7 +53,7 @@ object BotResponse {
                 Time.timeStamp()
             }
 
-            
+
             else ->{
                 when (random){
                     0 -> "다른 질문 해줘"
